@@ -1,0 +1,270 @@
+body{
+    font-family: 'poppins';
+    background-color: black;
+    color: white;
+}
+.logo{
+    width: 3em;
+    animation: 1s load forwards ;
+    opacity: 0;
+}
+@keyframes load{
+    from{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.logo-div{
+    display: flex;
+    align-items: center;
+}
+.logo-name{
+    font-size: 30px;
+    font-weight: bold;
+}
+.head{
+    display: flex;
+    align-items: center;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+}
+
+
+
+.calculator{
+    background-color: white;
+    width: 60%;
+    border-radius: 20px;
+}
+.position{
+    display: flex;
+    justify-content: center;
+}
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    width: 80%;
+    gap: 10px;
+}
+.num{
+    color: white;
+    background-color: rgb(0, 183, 255);
+}
+.button{
+    padding: 15px 27px;
+    border-radius: 100em;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px #999;
+}
+.button:hover{
+    background-color: hsl(199, 94%, 35%);
+}
+.button:active{
+    box-shadow: 0px 3px #666;
+    background-color: yellow;
+    transform: translateY(4px);
+}
+.symbols{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+}
+.sym{
+    background-color: blue;
+    color: white;
+}
+
+.sym:hover{
+    background-color:rgb(107, 107, 255);
+}
+.box{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.display{
+    background-color: rgb(139, 139, 139);
+    padding: 5px;
+    padding-left: 10px;
+    height: 45px;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+
+
+.name{
+    font-weight: bold;
+    font-size: 2em;
+}
+.code{
+    font-family: 'consolas';
+    width: max-content;
+    font-size: 15px;
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.code-box{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 680px) {
+    .calculator{
+        width: 24em;
+    }
+    .code{
+        width: 100%;
+        padding: 1px;
+        border: 2px solid white;
+        font-size: 13px;
+    }
+    .logo-name{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .calculator{
+        width: 100%;
+    }
+    .numbers{
+        grid-template-columns: repeat(3,auto);
+        
+    }
+    .button{
+        padding: 10px ;
+        width: 100%;
+    }
+    .title{
+        font-size: 19px;
+    }
+}
+
+
+
+
+/*body{
+    font-family: 'poppins';
+    background-color: black;
+    color: white;
+}
+.button{
+    font-size: 20px;
+    padding: 10px 17px;
+    border-radius: 100em;
+    width: 2.6em;
+    border: none;
+    margin: 10px;
+    font-weight: bold;
+    background-color: gray;
+    color: white;
+}
+.numbers{
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+}
+.box{
+    display: flex;
+    width: max-content;
+}
+.symbols{
+    display: flex;
+    flex-direction: column;
+}
+.sym{
+    background-color: orangered;
+    color: white;
+}
+.display{
+    text-align: right;
+    background-color: gray;
+    height: 1.7em;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 10px;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.calculator{
+    width:200%;
+    background-color: white;
+    border-radius: 20px;
+    height: max-content;
+}
+
+
+.tutorial{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.code-box{
+    /* display: grid;
+    grid-template-columns: repeat(3,auto); 
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 3em;
+}
+
+.logo-div{
+    display: flex;
+    align-items: center;
+}
+.logo-name{
+    font-size: 30px;
+    font-weight: bold;
+}
+.head{
+    display: flex;
+    align-items: center;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+}
+.name{
+    font-weight: bold;
+    font-size: 2em;
+}
+.code{
+    font-family: 'consolas';
+    width: max-content;
+    font-size: 15px;
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.position{
+    padding-left: 20px;
+}
+*/

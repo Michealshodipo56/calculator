@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="head">
+        <div class="logo-div">
+            <a href="#"><img class="logo" src="My logo.png" alt="sho design logo"></a>
+            <div class="logo-name">Sho design</div>
+        </div>
+        <div class="title">Calculator</div>
+    </div>
+
+<div class="tutorial">
+<div class="position">
+    <div class="calculator">
+        <p class="display"></p>
+        <div class="box">
+            <div class="numbers">
+                <button onclick="calculate(1)" class="button num">1</button>
+                <button onclick="calculate(2)" class="button num">2</button>
+                <button onclick="calculate(3)" class="button num">3</button>
+                <button onclick="calculate(4)" class="button num">4</button>
+                <button onclick="calculate(5)" class="button num">5</button>
+                <button onclick="calculate(6)" class="button num">6</button>
+                <button onclick="calculate(7)" class="button num">7</button>
+                <button onclick="calculate(8)" class="button num">8</button>
+                <button onclick="calculate(9)" class="button num">9</button>
+                <button onclick="calculate(0)" class="button num">0</button>
+                <button onclick="calculate('.')" class="button num">.</button>
+                <button onclick="total();" class="button num">=</button>
+                <button onclick="cal = ''; erase(); " class="button num">C</button>
+            </div>
+            <div class="symbols">
+                <button onclick="calculate(' + ')" class="button sym">+</button>
+                <button onclick="calculate(' - ')" class="button sym">-</button>
+                <button onclick="calculate(' * ')" class="button sym">*</button>
+                <button onclick="calculate(' / ')" class="button sym">/</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+    <div class="code-box">
+    <div class="html">
+        <div class="code">
+            <div class="name">HTML</div>
+                &lt;!DOCTYPE html&gt;
+                <br>
+                &lt;html&gt;
+                <br>
+                &lt;head&gt;
+                <br>
+                &lt;title&gt;Calculator&lt;/title&gt;
+                <br>
+                &lt;/head&gt;
+                <br>
+                &lt;body&gt;
+                <br>
+                <br>
+                &lt;div class="calculator"&gt;
+                <br>
+                &nbsp; &lt;p class="display"&gt;&lt;/p&gt;
+                <br>
+                &nbsp; &lt;div class="box"&gt;
+                <br>
+                &ensp; &ensp; &lt;div class="numbers"&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(1)" class="button num"&gt;1&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(2)" class="button num"&gt;2&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(3)" class="button num"&gt;3&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(4)" class="button num"&gt;4&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(5)" class="button num"&gt;5&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(6)" class="button num"&gt;6&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(7)" class="button num"&gt;7&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(8)" class="button num"&gt;8&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(9)" class="button num"&gt;9&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(0)" class="button num"&gt;0&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate('.')" class="button num"&gt;.&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="total();" class="button num"&gt;=&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="cal ='';erase();" class="button num"&gt;C&lt;/button&gt;
+                <br>
+                &ensp; &ensp; &lt;/div&gt;
+                <br>
+                &ensp; &ensp; &lt;div class="symbols"&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(' + ')" class="button sym"&gt;+&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(' - ')" class="button sym"&gt;-&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(' * ')" class="button sym"&gt;*&lt;/button&gt;
+                <br>
+                &emsp; &emsp; &emsp; &emsp; &lt;button onclick="calculate(' / ')" class="button sym"&gt;/&lt;/button&gt;
+                <br>
+                &ensp; &ensp; &lt;/div&gt;
+                <br>
+                &nbsp; &lt;/div&gt;
+                <br>
+                &lt;/div&gt;
+                <br>
+                <br>
+                &lt;/body&gt;
+                <br>
+                &lt;/html&gt;
+        </div>
+    </div>
+
+    <div class="css">
+        <div class="code">
+            <div class="name">CSS</div>
+
+            body{
+                <br>
+                &ensp; &ensp;font-family: 'poppins';
+                <br>
+            }
+            <p>
+            .button{
+                <br>
+                &ensp; &ensp;font-size: 20px;
+                <br>
+                &ensp; &ensp;padding: 10px 17px;
+                <br>
+                &ensp; &ensp;border-radius: 100em;
+                <br>
+                &ensp; &ensp;width: 2.4em;
+                <br>
+                &ensp; &ensp;border: none;
+                <br>
+                &ensp; &ensp;margin: 10px;
+                <br>
+                &ensp; &ensp;font-weight: bold;
+                <br>
+            }
+            </p>
+            .numbers{
+                <br>
+                &ensp; &ensp;width: max-content;
+                <br>
+                &ensp; &ensp;display: grid;
+                <br>
+                &ensp; &ensp;grid-template-columns: repeat(3,auto);
+                <br>
+            }
+            <p>
+            .box{
+                <br>
+                &ensp; &ensp;display: flex;
+                <br>
+                &ensp; &ensp;width: max-content;
+                <br>
+            }
+            </p>
+            .symbols{
+                <br>
+                &ensp; &ensp;display: flex;
+                <br>
+                &ensp; &ensp;flex-direction: column;
+                <br>
+            }
+            <p>
+            .sym{
+                <br>
+                &ensp; &ensp;background-color: orangered;
+                <br>
+                &ensp; &ensp;color: white;
+                <br>
+            }
+            </p>
+            .display{
+                <br>
+                &ensp; &ensp;text-align: right;
+                <br>
+                &ensp; &ensp;background-color: gray;
+                <br>
+                &ensp; &ensp;height: 1.5em;
+                <br>
+                &ensp; &ensp;font-size: 30px;
+                <br>
+                &ensp; &ensp;font-weight: bold;
+                <br>
+                &ensp; &ensp;padding-right: 10px;
+                <br>
+                &ensp; &ensp;border-top-left-radius: 20px;
+                <br>
+                &ensp; &ensp;border-top-right-radius: 20px;
+                <br>
+            }
+            <p>
+            .calculator{
+                <br>
+                &ensp; &ensp;width: max-content;
+                <br>
+                &ensp; &ensp;background-color: black;
+                <br>
+                &ensp; &ensp;border-radius: 20px;
+                <br>
+                &ensp; &ensp;height: max-content;
+                <br>
+            }
+            </p>
+        </div>
+    </div>
+
+    <div class="java">
+        <div class="code">
+            <div class="name">JavaScript</div>
+
+            <p>
+            let cal = '';
+            <br>
+        function calculate(add) {
+            <br>
+            cal+= add;
+            </p>
+
+            document.querySelector('.display')
+            <br>
+            .innerHTML = cal;
+        }
+        <p>
+        function total(){
+            <br>
+            document.querySelector('.display')
+            <br>
+            .innerHTML = eval(cal);
+            <br>
+        }
+        </p>
+        
+        function erase(){
+            <br>
+            document.querySelector('.display')
+            <br>
+            .innerHTML = cal;
+        }
+            </div>
+    </div>
+    </div>
+
+    </div>
+    
+
+    <script>
+        
+
+        //displaying the numbers
+        let cal = '';
+        function calculate(add) {
+            cal+= add;
+
+            document.querySelector('.display')
+            .innerHTML = cal;
+        }
+        //calculating the numbers
+        function total(){
+            document.querySelector('.display')
+            .innerHTML = eval(cal);
+        }
+        //removeing the number
+        function erase(){
+            document.querySelector('.display')
+            .innerHTML = cal;
+        }
+        
+    </script>
+</body>
+</html>
