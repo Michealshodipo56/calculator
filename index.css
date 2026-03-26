@@ -1,270 +1,123 @@
-body{
-    font-family: 'poppins';
-    background-color: black;
-    color: white;
-}
-.logo{
-    width: 3em;
-    animation: 1s load forwards ;
-    opacity: 0;
-}
-@keyframes load{
-    from{
-        transform: translateY(-50px);
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-.logo-div{
-    display: flex;
-    align-items: center;
-}
-.logo-name{
-    font-size: 30px;
-    font-weight: bold;
-}
-.head{
-    display: flex;
-    align-items: center;
-}
-.title{
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    width: 60%;
-}
-
-
-
-.calculator{
-    background-color: white;
-    width: 60%;
-    border-radius: 20px;
-}
-.position{
-    display: flex;
-    justify-content: center;
-}
-.numbers{
-    display: grid;
-    grid-template-columns: repeat(4,auto);
-    width: 80%;
-    gap: 10px;
-}
-.num{
-    color: white;
-    background-color: rgb(0, 183, 255);
-}
-.button{
-    padding: 15px 27px;
-    border-radius: 100em;
-    border: none;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0px 5px #999;
-}
-.button:hover{
-    background-color: hsl(199, 94%, 35%);
-}
-.button:active{
-    box-shadow: 0px 3px #666;
-    background-color: yellow;
-    transform: translateY(4px);
-}
-.symbols{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 20%;
-}
-.sym{
-    background-color: blue;
-    color: white;
-}
-
-.sym:hover{
-    background-color:rgb(107, 107, 255);
-}
-.box{
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-}
-.display{
-    background-color: rgb(139, 139, 139);
-    padding: 5px;
-    padding-left: 10px;
-    height: 45px;
+*{
     margin: 0;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    overflow: hidden;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    padding: 0;
+    box-sizing: border-box;    
+}
+:root {
+    --bg-color: #262626;
+    --calculator-color: #000000;
+    --radius: 20px;
+    --space: 1px;
+    --color-orange: #c78f20;
+    --color-gray: rgb(52, 49, 49);
+}
+body{
+    background-color: var(--bg-color);
+    color: white;
+    font-family: 'Inter', sans-serif;
 }
 
-
-
-
-.name{
-    font-weight: bold;
-    font-size: 2em;
-}
-.code{
-    font-family: 'consolas';
-    width: max-content;
-    font-size: 15px;
-    border: 3px solid white;
-    padding: 10px;
-    border-radius: 10px;
-}
-.code-box{
+.content{
     display: flex;
-    gap: 1em;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;    
 }
-
-@media only screen and (max-width: 680px) {
-    .calculator{
-        width: 24em;
-    }
-    .code{
-        width: 100%;
-        padding: 1px;
-        border: 2px solid white;
-        font-size: 13px;
-    }
-    .logo-name{
-        font-size: 20px;
-    }
-    .title{
-        font-size: 25px;
-    }
-}
-@media only screen and (max-width: 410px) {
-    .calculator{
-        width: 100%;
-    }
-    .numbers{
-        grid-template-columns: repeat(3,auto);
-        
-    }
-    .button{
-        padding: 10px ;
-        width: 100%;
-    }
-    .title{
-        font-size: 19px;
-    }
-}
-
-
-
-
-/*body{
-    font-family: 'poppins';
-    background-color: black;
-    color: white;
-}
-.button{
-    font-size: 20px;
-    padding: 10px 17px;
-    border-radius: 100em;
-    width: 2.6em;
-    border: none;
-    margin: 10px;
-    font-weight: bold;
-    background-color: gray;
-    color: white;
-}
-.numbers{
-    width: max-content;
-    display: grid;
-    grid-template-columns: repeat(5,auto);
-}
-.box{
+.calculator-container{
+    width: 100%;
+    height: 100%;
     display: flex;
-    width: max-content;
-}
-.symbols{
+    align-items: center;
+    justify-content: center;
+}    
+.calculator{
     display: flex;
     flex-direction: column;
+    background-color: var(--calculator-color);
+    width: 90%;
+    max-width: 25em;
+    min-height: 20em;
+    height: 90%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    gap: 1em;
+    box-shadow: 1px 1px 1em rgb(92, 91, 91);
+    border: 1em solid black;
 }
-.sym{
-    background-color: orangered;
-    color: white;
+.box{
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
 }
 .display{
-    text-align: right;
-    background-color: gray;
-    height: 1.7em;
-    font-size: 30px;
-    font-weight: bold;
-    padding-right: 10px;
+    background-color: var(--color-gray);
+    width: 95%;
+    height: 70%;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
     padding: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    overflow: hidden;
+    font-family: 'Calculator', sans-serif;
 }
-.calculator{
-    width:200%;
-    background-color: white;
-    border-radius: 20px;
-    height: max-content;
+.button-section{
+    height: 100%;
+    padding: 10px 1px;
 }
-
-
-.tutorial{
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.code-box{
-    /* display: grid;
-    grid-template-columns: repeat(3,auto); 
+.row{
     display: flex;
-    gap: 1em;
-    flex-wrap: wrap;
+    height: 20%;
+     margin: var(--space);
 }
-.logo{
-    width: 3em;
+button{
+    width: 100%;
+    height: 100%;
+    margin: var(--space);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+button:active{
+    background-color: var(--color-gray);
+    color: #ffffff;
+}
+.clear{
+    background-color: #c72020;
+}
+.equal:active{
+    background-color: green;
 }
 
-.logo-div{
+.writeup{
+    width: 100%;
+    padding: 1rem;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.logo-name{
-    font-size: 30px;
-    font-weight: bold;
-}
-.head{
-    display: flex;
-    align-items: center;
-}
-.title{
-    font-size: 40px;
-    font-weight: bold;
+a{
     text-align: center;
-    width: 60%;
+    display: inline;
 }
-.name{
-    font-weight: bold;
-    font-size: 2em;
+.writeup img{
+    width: 30%;
+    margin: 10px;
 }
-.code{
-    font-family: 'consolas';
-    width: max-content;
-    font-size: 15px;
-    border: 3px solid white;
-    padding: 10px;
-    border-radius: 10px;
+hr{
+    width: 100%;
 }
-.position{
-    padding-left: 20px;
+
+
+@media (min-width: 768px) {
+    .content{
+        flex-direction: row;
+    }
 }
-*/
