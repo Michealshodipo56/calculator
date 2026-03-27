@@ -1,8 +1,10 @@
+/* Global Reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;    
 }
+/* Theme Variables */
 :root {
     --bg-color: #262626;
     --calculator-color: #000000;
@@ -11,12 +13,14 @@
     --color-orange: #c78f20;
     --color-gray: rgb(52, 49, 49);
 }
+/* Body and Typography */
 body{
     background-color: var(--bg-color);
     color: white;
     font-family: 'Inter', sans-serif;
 }
 
+/* Main Layout Wrapper */
 .content{
     display: flex;
     justify-content: center;
@@ -32,6 +36,7 @@ body{
     align-items: center;
     justify-content: center;
 }    
+/* Calculator Component Styles */
 .calculator{
     display: flex;
     flex-direction: column;
@@ -66,6 +71,7 @@ body{
     overflow: hidden;
     font-family: 'Calculator', sans-serif;
 }
+/* Button Interaction Area */
 .button-section{
     height: 100%;
     padding: 10px 1px;
@@ -99,6 +105,7 @@ button:active{
 } 
     
 
+/* Branding Section */
 .writeup{
     width: 100%;
     padding: 1rem;
@@ -120,6 +127,7 @@ hr{
 }
 
 
+/* Responsive Adjustments */
 @media (min-width: 768px) {
     .content{
         flex-direction: row;
