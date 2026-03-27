@@ -12,3 +12,7 @@ function total(){
     document.querySelector('.display').innerHTML= eval(cal);
 }
 
+function backspace(){
+    cal = cal.slice(0, -1);
+    document.querySelector('.display').textContent = cal;
+}

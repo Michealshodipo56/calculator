@@ -94,6 +94,10 @@ button:active{
 .equal:active{
     background-color: green;
 }
+.operators{
+    background-color: rgb(255, 255, 255);
+} 
+    
 
 .writeup{
     width: 100%;

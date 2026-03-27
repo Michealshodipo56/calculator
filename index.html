@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5a3281998b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
@@ -32,31 +33,31 @@
                 <div class="button-section">
                     <div class="row">
                     <button class="clear" onclick="cal=''; erase()">C</button>
-                    <button onclick="num(' % ')">%</button>
-                    <button onclick="num(' / ')">/</button>
+                    <button onclick="backspace()"><i class="fa-solid fa-arrow-left" style="color: rgb(0, 0, 0);"></i></button>
+                    <button class="operators" onclick="num(' / ')">/</button>
                     </div>
                     <div class="row">
                     <button onclick="num(7)">7</button>
                     <button onclick="num(8)">8</button>
                     <button onclick="num(9)">9</button>
-                    <button onclick="num(' * ')">*</button>
+                    <button class="operators" onclick="num(' * ')">*</button>
                     </div>
                     <div class="row">
                     <button onclick="num(4)">4</button>
                     <button onclick="num(5)">5</button>
                     <button onclick="num(6)">6</button>
-                    <button onclick="num(' - ')">-</button>
+                    <button class="operators" onclick="num(' - ')">-</button>
                     </div>
                     <div class="row">
                     <button onclick="num(1)">1</button>
                     <button onclick="num(2)">2</button>
                     <button onclick="num(3)">3</button>
-                    <button onclick="num(' + ')">+</button>
+                    <button class="operators" onclick="num(' + ')">+</button>
                     </div>
                     <div class="row">
                     <button onclick="num(0)">0</button>
                     <button onclick="num('.')">.</button>
-                    <button class="equal" onclick="total()">=</button>
+                    <button class="operators" class="equal" onclick="total()">=</button>
                     </div>
                 </div>    
             </div>
